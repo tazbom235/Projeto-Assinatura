@@ -1,0 +1,273 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Assinatura betta</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js">
+        <link rel="stylesheet" href="style.css">
+        <script src="pegar.js"></script>
+    </head>
+
+    <body>
+<div class="container">
+    <h2>Gerador de Assinatura</h2>
+    <br>
+    <form class="form-horizontal">
+
+      <div class="form-group">
+        <label for="nome" class="col-sm-2 control-label">Nome</label>
+        <div name="name" class="col-sm-10">
+          <input name="name" type="text" class="form-control" id="nome" placeholder="João Fictício" value="" autocomplete maxlength="50">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="departamento" class="col-sm-2 control-label">Departamento</label>
+        <div class="col-sm-10">
+        <select name="departamento" type="text" class="form-control" id="departamento"  value="">
+          <option>ADM - BOGOTA</option>
+          <option>ADM NEGOCIOS</option>
+          <option>BACKOFFICE</option>
+          <option>CAC</option>
+          <option>COMERCIAL</option>
+          <option>COMERCIAL VENDAS</option>
+          <option>COMPRAS</option>
+          <option>CONTRALADORIA</option>
+          <option>CONTRATOS</option>
+          <option>DELIVERY INFRA</option>
+          <option>DIR COMERCIAL</option>
+          <option>DIRETORIA ADM</option>
+          <option>ESTOQUE</option>
+          <option>FACILITIES</option>
+          <option>FINANCEIRO</option>
+          <option>FISCAL</option>
+          <option>IMPLANTACAO</option>
+          <option>IMPLANTACAO TELECOM</option>
+          <option>LICITACOES</option>
+          <option>MARKETING</option>
+          <option>PARCEIROS</option>
+          <option>PRE VENDAS</option>
+          <option>PRESTADOR - DBA</option>
+          <option>PRESTADOR - SANKHYA</option>
+          <option>PRE-VENDAS</option>
+          <option>PROJETOS</option>
+          <option>RH</option>
+          <option>SUPORTE T.I</option>
+          <option>SUPORTE TELECOM</option>
+        </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="tel" class="col-sm-2 control-label">Celular corporativo</label>
+        <div class="col-sm-10">
+          <input name="tel" type="tel" size="13" class="form-control" id="tel" placeholder="(XX) 99999-1111" value="" autocomplete  maxlength="50">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+          <div class="input-group">
+          <input name="username" type="text" class="form-control" id="email" placeholder="Digite o e-mail" value="" autocomplete maxlength="25">
+          <div class="input-group-addon email">@betta.gp</div> 
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="endereco" class="col-sm-2 control-label">Endereço:</label>
+        <div class="col-sm-10">
+        <select name="endereco" type="text" class="form-control" id="endereco"  value="">
+          <option>R. Teodoro de Beaurepaire, 126 - Vila Dom Pedro I, São Paulo - SP, 04279-030</option>
+          <option>Av. Rio Branco, 115 19º/20º Andar - Centro - Rio de Janeiro - RJ, 18020-266</option>
+          <option>Rua dos Guajajaras, 910 (Salas 1512 e 1513) - Centro - Belo Horizonte - MG, 30180-100</option>
+          <option>Avenida Sete de Setembro, 5388 (Sala 802) -  Batel - Curitiba - PR, 80050-315</option>
+          <option>Carrera 46# 22B - 20 Oficina 409 Edifício Salitre Office P.H CEP: 111311</option>
+          <option>R. Orlando Carpino, 149 - Jardim Chapadão - Campinas - SP, 13070-143</option>
+        </select>
+        </div>
+      </div>
+      </form>
+    
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" class="btn btn-default" onclick="gerar()"> Gerar Assinatura </button>
+        </div>
+      </div>
+
+    </form>
+    <br>
+    <br>
+    <br>
+	<div id="alertdiv" class="alert alert-dismissible hidden" role="alert">
+	    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+	    </button> <span id="alerttext">Text</span>
+	</div>
+          
+    <hr>
+       
+  <br>
+  <h4>Sua Assinatura</h2>        
+             
+<div id="assinatura" class="well">
+    <div class="text-muted text-center small">
+        Clique no botão Gerar para criar uma assinatura
+    </div>
+<script type="template/html" id="t2">
+<footer> 
+<div class="sc-kjoXOD kApfir esg__email-sig" font-size="small" style="user-select: all;">
+  <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW" style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Calibri;"><tbody>
+  <tr>
+  <td>
+  <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW" style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Calibri;"><tbody>
+  <tr>
+  <td style="vertical-align: top;">
+  <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW" style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Calibri;"><tbody>
+  <tr>
+  <td class="sc-TOsTZ kjYrri" style="text-align: center;"><img src="https://betta.gp/wp-content/uploads/2021/08/LOGO-COLORIDO-BAIXA-RESOLUCAO.png" role="presentation" width="130" class="sc-cHGsZl bHiaRe" style="max-width: 148px; display: block;">
+  </td>
+  </tr>
+  <tr>
+  <td height="20">
+  </td>
+  </tr>
+  <tr>
+  <td style="text-align: center;">
+  <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW" style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Calibri; display: inline-block;"><tbody>
+  <tr style="text-align: center;">
+  <td><a href="https://www.facebook.com/BettaGlobalPartner" color="#3491f8" class="sc-hzDkRC kpsoyz" style="display: inline-block; padding: 0px; "><img src="https://i.ibb.co/wBLPXsX/facebook.png" alt="facebook" color="" height="24" class="sc-bRBYWo ccSRck" style="background-color: rgb(); max-width: 135px; display: block;"></a>
+  </td>
+  <td width="5">
+  
+  <div>
+  </div>
+  </td>
+  <td><a href="https://www.linkedin.com/company/bettaglobalpartner/mycompany/" color="#3491f8" class="sc-hzDkRC kpsoyz" style="display: inline-block; padding: 0px;"><img src="https://i.ibb.co/ypr8Wzf/linkedin.png" alt="linkedin" color="" height="32" class="sc-bRBYWo ccSRck" style="background-color: rgb(); max-width: 135px; display: block;"></a>
+  </td>
+  </td>
+  <td>
+  <td width="5">
+    <td><a href="https://betta.gp" color="#3491f8" class="sc-hzDkRC kpsoyz" style="display: inline-block; padding: 0px;"><img src="https://i.ibb.co/PYr1ZDV/URL.png" alt="linkedin" color="" height="24" class="sc-bRBYWo ccSRck" style="background-color: rgb(); max-width: 135px; display: block;"></a>
+    </td>
+  </td>
+  </tr></tbody>
+  </table>
+  </td>
+  </tr></tbody>
+  </table>
+  </td>
+  <td width="46">
+  
+  <div>
+  </div>
+  </td>
+  <td style="padding: 5px; vertical-align: middle;"><h3 color="#000000" class="sc-fBuWsC eeihxG" style="margin: 0px; font-size: 16px; font-family: Calibri ; color: rgb(0, 0, 0);line-height:1.60;">
+  <span style="font-size:19px; color: rgb(28, 111, 162)"><b>{{this.nome}}</b>
+  </span>
+  
+  <span>&nbsp;
+  </span>
+  
+  <span>
+  </span></h3>
+  
+  <p color="#000000" font-size="small" class="sc-fMiknA bxZCMx" style="margin: 0px; color: rgb(0, 0, 0); font-size: 12px; line-height: 20px;">
+  
+  <span style="font-size:14px; color:rgb(91, 193, 239) "><b>{{this.departamento}}</b>
+  </span></p>
+  
+  <p color="#000000" font-size="small" class="sc-dVhcbM fghLuF" style="margin: 0px; font-weight: 500; color: rgb(0, 0, 0); font-size: 12px; line-height: 20px;">
+  
+  <span>
+  </span></p>
+  <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW" style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Calibri; width: 100%;"><tbody>
+  <tr>
+  <td height="10">
+  </td>
+  </tr>
+  <tr>
+  <td color="#51abd3" direction="horizontal" height="1" class="sc-jhAzac hmXDXQ" style="width: 100%; border-bottom: 1px solid rgb(91, 193, 239); border-left: none; display: block;">
+  </td>
+  </tr>
+  <tr>
+  <td height="10">
+  </td>
+  </tr></tbody>
+  </table>
+  <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW" style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Calibri;"><tbody>
+  <tr height="25" style="vertical-align: middle;">
+  <td width="30" style="vertical-align: middle;">
+  <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW" style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Calibri;"><tbody>
+  <tr>
+  <td style="vertical-align: bottom;">
+  
+  <span color="#" width="11" class="sc-jlyJG bbyJzT" style="display: block; background-color: rgb();"><img src="https://i.ibb.co/F3JsySG/telefone.png" color="#" width="13" class="sc-iRbamj blSEcj" style="display: block; background-color: rgb();">
+  </span>
+  </td>
+  </tr></tbody>
+  </table>
+  </td>
+  <td style="padding: 0px;">
+  
+  <span style="font-size:12px;">(11) 5060-3888 | {{this.tel}}
+  </span></a>
+  </td>
+  </tr>
+  <tr height="25" style="vertical-align: middle;">
+  <td width="30" style="vertical-align: middle;">
+  <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW" style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Calibri;"><img src="https://i.ibb.co/8gsJhTf/email.png" color="#" width="13" class="sc-iRbamj blSEcj" style="display: block; background-color: rgb();">
+  </span>
+  </td>
+  </tr></tbody>
+  </table>
+  </td>
+  <td style="padding: 0px;"><a href="mailto:{{this.email}}@betta.gp" color="#000000" class="sc-gipzik iyhjGb" style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;">
+  
+  <span>{{this.email}}@betta.gp
+  </span></a>
+  </td>
+  </tr>
+  <tr height="25" style="vertical-align: middle;">
+  <td width="30" style="vertical-align: middle;">
+  <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW" style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Calibri;"><tbody>
+  <tr>
+  <td style="vertical-align: bottom;">
+  
+  <span color="#" width="11" class="sc-jlyJG bbyJzT" style="display: block; background-color: rgb();"><img src="https://i.ibb.co/cwjjwfK/localizacao.png" color="#" width="13" class="sc-iRbamj blSEcj" style="display: block; background-color: rgb();">
+  </span>
+  </td>
+  </tr></tbody>
+  </table>
+  </td>
+  <td style="padding: 0px;"><a color="#000000" class="sc-gipzik iyhjGb" style="text-decoration: none; color: rgb(0, 0, 0); font-size: 12px;">
+  
+  <span color="#000000" class="sc-csuQGl CQhxV" style="font-size: 12px; color: rgb(0, 0, 0);">
+  
+  <span>{{this.endereco}}
+  </span>
+  </span>
+  </td>
+  </tr></tbody>
+  </table>
+  <table cellpadding="0" cellspacing="0" class="sc-gPEVay eQYmiW" style="vertical-align: -webkit-baseline-middle; font-size: small; font-family: Calibri;"><tbody>
+  <tr>
+  <td height="30">
+  </td>
+  </tr></tbody>
+  </table><a href="" target="_blank" rel="noopener noreferrer" class="sc-gisBJw kDlVKO" style="font-size: 12px; display: block; color: rgb(0, 0, 0);"></a>
+  </td>
+  </tr></tbody>
+  </table>
+  </td>
+  </tr></tbody>
+  </table>
+  </div>                     
+</footer>
+</script>
+</div>
+</div>
+<div class="footer text-center text-muted small">Criado por Thalles Rosa</a> &copy; 2021</div>
+</body>
+</html>
